@@ -16,7 +16,7 @@ private fun List<String>.toIntListPair(): Pair<List<Int>, List<Int>> {
     val left = mutableListOf<Int>()
     val right = mutableListOf<Int>()
 
-    this.forEach { line ->
+    forEach { line ->
         val split = line.split("\\s+".toRegex())
         left.add(split.first().toInt())
         right.add(split.last().toInt())

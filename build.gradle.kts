@@ -61,9 +61,10 @@ abstract class KotlinDayGenerator : DefaultTask() {
                 // test if implementation meets criteria from the description, like:
                 val testInput = readInput("Day${txtDay}_test")
                 check(part1(testInput) == 1)
-
                 val input = readInput("Day$txtDay")
                 println(part1(input))
+                
+                check(part2(testInput) == 1)
                 println(part2(input))
             }
             
