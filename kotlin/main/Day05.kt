@@ -16,7 +16,7 @@ fun main() {
     println(part2(input))
 }
 
-fun List<Int>.isOrdered(rules: Map<Int, List<Int>>): Boolean {
+private fun List<Int>.isOrdered(rules: Map<Int, List<Int>>): Boolean {
     for (idx in 0..lastIndex - 1) {
         val page = this[idx]
         rules[page]?.let { ints ->
@@ -32,7 +32,7 @@ fun List<Int>.isOrdered(rules: Map<Int, List<Int>>): Boolean {
     return true
 }
 
-fun List<Int>.createFix(rules: Map<Int, List<Int>>): List<Int> {
+private fun List<Int>.createFix(rules: Map<Int, List<Int>>): List<Int> {
     val tmp = toMutableList()
     do {
         for (idx in 0..tmp.lastIndex - 1) {

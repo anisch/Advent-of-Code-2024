@@ -12,8 +12,6 @@ fun main() {
     println(part2(input))
 }
 
-private data class Vec(val y: Int, val x: Int)
-
 private fun List<String>.isXmas(x: Vec, m: Vec, a: Vec, s: Vec): Boolean {
     return this[x.y][x.x] == 'X' && this[m.y][m.x] == 'M' && this[a.y][a.x] == 'A' && this[s.y][s.x] == 'S'
 }
